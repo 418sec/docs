@@ -26,7 +26,7 @@ public class CorsFilter implements Filter {
         if (EnvironmentUtil.isDevMode() && request.getHeader("origin") != null) {
             // Add CORS in dev mode
             response.addHeader("Access-Control-Allow-Origin", request.getHeader("origin"));
-            response.addHeader("Access-Control-Allow-Credentials", "true");
+            response.addHeader("Access-Control-Allow-Credentials", "false");
             response.addHeader("Access-Control-Max-Age", "3600");
             response.addHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
             response.addHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
